@@ -20,7 +20,7 @@ smtp_ssl_port = 465
 
 # username ou email para logar no servidor
 username = 'saber.ufpr@gmail.com'
-password = 'jXaeI.zwo2uC'
+password = 'Kdy,Z(VEyNJX0R6'
 
 # remetente
 from_addr = 'saber.ufpr@gmail.com'
@@ -41,7 +41,7 @@ for pessoa in participantes:
 
     # parâmetros da mensagem a ser enviada
     message = MIMEMultipart()
-    message['subject'] = 'Agradecimento e feedback - SABER 2019' # não pode ter acentuação no assunto da mensagem
+    message['subject'] = 'Certificados - SABER 2019' # não pode ter acentuação no assunto da mensagem
     message['from'] = from_addr
     message['to'] = to_addrs
     message.attach(MIMEText(body, 'plain'))
@@ -55,7 +55,7 @@ for pessoa in participantes:
     if (contador > 15):
         server.quit()
         print("RECONECTANDO COM O SERVIDOR...")
-        time.sleep(120) #espera 2min para reconectar com o servidor
+        time.sleep(100) #espera 1min40s para reconectar com o servidor
 
         server = smtplib.SMTP_SSL(smtp_ssl_host, smtp_ssl_port)
         server.login(username, password)
@@ -63,7 +63,7 @@ for pessoa in participantes:
         contador = 0
         print("RECONECTADO")
     else:
-        time.sleep(70) #espera 1min10s para enviar a próxima mensagem
+        time.sleep(90) #espera 1min30s para enviar a próxima mensagem
 
 msg2.close()
 server.quit()
