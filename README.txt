@@ -9,6 +9,7 @@ LINKS:
 EXECUÇÃO:
 python3 sem_anexo.py
 
+
 USANDO O TMUX:
 - ir ao diretório do "projeto"
 - tmux
