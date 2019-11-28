@@ -5,6 +5,10 @@ import smtplib
 import time
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email import encoders
+
+path="./CRACHA/"
 
 # lista de participantes do evento no formato .csv (nome,email)
 lista = open('./participantes.csv', encoding="ISO-8859-1")
@@ -25,7 +29,7 @@ password = 'Kdy,Z(VEyNJX0R6'
 # remetente
 from_addr = 'saber.ufpr@gmail.com'
 
-# inicia a conexão de forma segura usando SSL
+# conexão de forma segura usando SSL
 server = smtplib.SMTP_SSL(smtp_ssl_host, smtp_ssl_port)
 
 # para interagir com um servidor externo precisaremos fazer login nele
@@ -41,10 +45,23 @@ for pessoa in participantes:
 
     # parâmetros da mensagem a ser enviada
     message = MIMEMultipart()
-    message['subject'] = 'Certificados - SABER 2019' # não pode ter acentuação no assunto da mensagem
+    message['subject'] = 'Agradecimento e feedback - SABER 2019' # não pode ter acentuação no assunto da mensagem
     message['from'] = from_addr
     message['to'] = to_addrs
     message.attach(MIMEText(body, 'plain'))
+
+    #----------------------------------------------------------------------------
+    # parâmetros para anexar um documento
+    filename = nome+".pdf"
+    file = path+nome+".pdf"
+    attachment = open(file, 'rb')
+    part = MIMEBase('application', 'octet-stream')
+    part.set_payload((attachment).read())
+    encoders.encode_base64(part)
+    part.add_header('Content-Disposition', "attachment; filename= %s" % filename)
+    message.attach(part)
+    #----------------------------------------------------------------------------
+
 
     # ENVIO DA MENSAGEM
     server.sendmail(from_addr, to_addrs, message.as_string())
