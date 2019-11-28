@@ -5,3 +5,7 @@ https://code.tutsplus.com/pt/tutorials/sending-emails-in-python-with-smtp--cms-2
 
 https://www.google.com/settings/security/lesssecureapps
 
+
+
+execução: python3 sem_anexo.py
+

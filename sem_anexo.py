@@ -52,7 +52,7 @@ for pessoa in participantes:
     print ("mensagem enviada com sucesso para:   "+nome+"   no e-mail:   "+to_addrs)
     contador = contador + 1
 
-    if (contador > 15):
+    if (contador > 10):
         server.quit()
         print("RECONECTANDO COM O SERVIDOR...")
         time.sleep(100) #espera 1min40s para reconectar com o servidor
@@ -63,8 +63,7 @@ for pessoa in participantes:
         contador = 0
         print("RECONECTADO")
     else:
-        time.sleep(90) #espera 1min30s para enviar a próxima mensagem
+        time.sleep(120) #espera 2min para enviar a próxima mensagem
 
-msg2.close()
 server.quit()
 print("\nMENSAGEM ENVIADA A TODOS OS PARTICIPANTES")
