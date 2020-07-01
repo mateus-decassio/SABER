@@ -1,18 +1,22 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: ISO-8859-1 -*-
 
 import csv
 import smtplib
 import time
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email import encoders
+
+path="../crachas/"
 
 # lista de participantes do evento no formato .csv (nome,email)
-lista = open('./participantes.csv', encoding="ISO-8859-1")
+lista = open('../modelo.csv', encoding="ISO-8859-1")
 participantes = csv.DictReader(lista)
 
 # pré-definição da mensagem a ser enviada
-msg1 = "Olá, "
-msg2 = open('./mensagem.txt', 'r', encoding="ISO-8859-1").read()
+msg1 = "Prezado(a) "
+msg2 = open('../mensagem.txt', 'r', encoding="ISO-8859-1").read()
 
 # conexão com os servidores do google
 smtp_ssl_host = 'smtp.gmail.com'
@@ -25,7 +29,7 @@ password = 'KdyVEyNJX0R6'
 # remetente
 from_addr = 'saber.ufpr@gmail.com'
 
-# inicia a conexão de forma segura usando SSL
+# conexão de forma segura usando SSL
 server = smtplib.SMTP_SSL(smtp_ssl_host, smtp_ssl_port)
 
 # para interagir com um servidor externo precisaremos fazer login nele
@@ -33,18 +37,31 @@ server.login(username, password)
 
 contador = 0
 for pessoa in participantes:
-    nome = pessoa["nome"].split(" ")[0]
+    nome = pessoa["nome"]
     to_addrs = pessoa["email"] # destinatário
 
-    body = msg1+str(nome)+"!\n\n"
-    body = body + msg2
+    body = msg1+str(nome)+",\n\n";
+    body = body + msg2;
 
     # parâmetros da mensagem a ser enviada
     message = MIMEMultipart()
-    message['subject'] = 'SABER 2020' # não pode ter acentuação no assunto da mensagem
+    message['subject'] = 'Agradecimento e feedback - SABER 2019' # não pode ter acentuação no assunto da mensagem
     message['from'] = from_addr
     message['to'] = to_addrs
     message.attach(MIMEText(body, 'plain'))
+
+    #----------------------------------------------------------------------------
+    # parâmetros para anexar um documento
+    filename = nome+".png"
+    file = path+nome+".png"
+    attachment = open(file, 'rb')
+    part = MIMEBase('application', 'octet-stream')
+    part.set_payload((attachment).read())
+    encoders.encode_base64(part)
+    part.add_header('Content-Disposition', "attachment; filename= %s" % filename)
+    message.attach(part)
+    #----------------------------------------------------------------------------
+
 
     # ENVIO DA MENSAGEM
     server.sendmail(from_addr, to_addrs, message.as_string())
@@ -63,7 +80,7 @@ for pessoa in participantes:
         contador = 0
         print("RECONECTADO")
     else:
-        time.sleep(120) #espera 2min para enviar a próxima mensagem
+        time.sleep(150) #espera 2min30s para enviar a próxima mensagem
 
 server.quit()
 print("\nMENSAGEM ENVIADA A TODOS OS PARTICIPANTES")
