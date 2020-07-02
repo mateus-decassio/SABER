@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 # lista de participantes do evento no formato .csv (nome,email)
-lista = open('./participantes.csv', encoding="ISO-8859-1")
+lista = open('./participantes.csv', encoding="UTF-8")
 participantes = csv.DictReader(lista)
 
 # pré-definição da mensagem a ser enviada
@@ -41,7 +41,7 @@ for pessoa in participantes:
 
     # parâmetros da mensagem a ser enviada
     message = MIMEMultipart()
-    message['subject'] = 'SABER 2020' # não pode ter acentuação no assunto da mensagem
+    message['subject'] = 'SABER 2020'
     message['from'] = from_addr
     message['to'] = to_addrs
     message.attach(MIMEText(body, 'plain'))
