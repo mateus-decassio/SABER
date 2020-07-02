@@ -55,7 +55,7 @@ for pessoa in participantes:
     if (contador > 9):
         server.quit()
         print("RECONECTANDO COM O SERVIDOR...")
-        time.sleep(120) #espera 2min para reconectar com o servidor
+        time.sleep(90) #esperar para reconectar com o servidor
 
         server = smtplib.SMTP_SSL(smtp_ssl_host, smtp_ssl_port)
         server.login(username, password)
@@ -63,7 +63,7 @@ for pessoa in participantes:
         contador = 0
         print("RECONECTADO")
     else:
-        time.sleep(120) #espera 2min para enviar a próxima mensagem
+        time.sleep(70) #esperar para enviar a próxima mensagem
 
 server.quit()
 print("\nMENSAGEM ENVIADA A TODOS OS PARTICIPANTES")
