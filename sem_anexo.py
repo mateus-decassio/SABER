@@ -41,7 +41,7 @@ for pessoa in participantes:
 
     # parâmetros da mensagem a ser enviada
     message = MIMEMultipart()
-    message['subject'] = 'Campeonato de jogos - SABER 2020'
+    message['subject'] = 'SABER 2020 - Inscrições Abertas'
     message['from'] = from_addr
     message['to'] = to_addrs
     message.attach(MIMEText(body, 'plain'))
