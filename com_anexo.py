@@ -69,7 +69,7 @@ for pessoa in participantes:
     print ("mensagem enviada com sucesso para:   "+nome+"   no e-mail:   "+to_addrs)
     contador = contador + 1
 
-    if (contador > 9):
+    if (contador > 8):
         server.quit()
         print("RECONECTANDO COM O SERVIDOR...")
         time.sleep(90)
