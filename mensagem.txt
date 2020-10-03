@@ -1,14 +1,28 @@
-As inscrições para a Semana Aberta de Informática (SABER) já estão abertas! Este ano a SABER ocorrerá dos dias 06 a 11 de outubro de 2020, em uma versão integralmente online por conta da pandemia do Coronavírus.
-
-Todas as informações a respeito do evento estão presentes neste site: https://www.even3.com.br/saber2020
-
-A inscrição, por sua vez, está sendo realizada via Google Forms neste link: https://forms.gle/dyKVcNg9TU3n5D29A
-
-Estamos planejando um evento super interessante em relação a palestras e minicursos, além da Maratona de Programação e o Campeonato de Jogos que teremos este ano.
-Todas as informações a respeito do Campeonato de Jogos, bem como a inscrição, estão sendo realizadas no seguinte servidor do Discord: https://discord.com/invite/SJKCNaS
+Estamos te mandando esta mensagem pois precisamos repassar algumas informações importantes a respeito da Semana Aberta de Informática. Afinal, já está chegando a hora!
 
 
-Esperamos que você possa acompanhar conosco este evento que preparamos. Contamos com sua presença!
+PALESTRAS E MINICURSOS:
+Com o objetivo de tornar a nossa comunicação mais rápida e eficaz, montamos um servidor, na plataforma do Discord, para te orientar melhor com relação ao desenvolvimento das palestras e minicursos no decorrer da semana.
+O link para entrar neste servidor é:
+
+Nesse servidor postaremos informações importantes a respeito de cada atividade que acontecerá na SABER deste ano, como links de acesso à transmissão das atividades, arquivos importantes e os formulários para controle de presença (fundamental para podermos gerar o seu Certificado de Participação no evento).
+Ah! Vamos combinar uma coisa? Caso algum imprevisto aconteça com alguma atividade na semana, nós faremos comunicados diretamente na nossa página no Facebook. Então, caso você perca algum comunicado que fizermos no Discord com relação a alguma atividade, você pode dar uma olhadinha na nossa página?
+
+
+
+ATIVIDADES EXTRAS:
+Campeonato de Jogos: este ano nós estamos organizando um Campeonato de Jogos muuuito legal! É um campeonato local, voltado exclusivamente para a diversão de todos os participantes durante a realização da SABER. Todas as informações a respeito do Campeonato de Jogos, bem como a inscrição nesse evento, estão sendo realizadas no seguinte servidor do Discord: https://discord.com/invite/SJKCNaS
+Ah! Não se esqueça! O primeiro passo é sua inscrição individual no canal #inscrição , tá legal?!
+
+Maratona de Programação: a Maratona de Programação é uma competição voltada para cursos afins da área da Computação e tem o objetivo de promover nos estudantes a criatividade, a capacidade de trabalho em equipe, a busca de novas soluções de software e a habilidade de resolver problemas sob pressão. Nesse sentido, decidimos aproveitar o espaço criado para o Campeonato de Jogos para dar lugar, também, à competição. Então, caso tenha interesse em participar da Maratona, basta entrar no servidor citado acima ( https://discord.com/invite/SJKCNaS ) e comentar "Maratona de Programação" no canal #inscrição . Beleza?!
+
+
+Uma outra novidade que teremos este ano é que as palestras autorizadas por cada palestrante serão disponibilizadas em nosso canal no YouTube. Então, caso perca alguma atividade, não esqueça de conferir em nosso canal!
+
+
+
+Por fim, esperamos que você aproveite bastante essa semana de atividades que preparamos para você. Estamos enviando anexo a esta mensagem uma imagem do cronograma de atividades da SABER. Para um maior detalhamento de cada uma, basta acessar a nossa página do evento ( https://www.even3.com.br/saber2020 ) e clicar na atividade correspondente.
+
 
 
 Não esqueça de nos seguir nas redes sociais!
@@ -23,10 +37,3 @@ Qualquer dúvida, só escrever para a gente no saber.ufpr@gmail.com.
 
 Atenciosamente,
 Comissão de Organização da SABER 2020
-
-
-
-
-
-
-PS.: Você está recebendo esta mensagem pois estava inscrito no evento da SABER de 2019. Caso queira cancelar sua inscrição na lista de e-mails, basta preenchê-lo aqui: https://forms.gle/8Et2wjgPHZkvYFDx7
