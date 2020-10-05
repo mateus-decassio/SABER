@@ -40,7 +40,7 @@ for pessoa in participantes:
     nome = pessoa["nome"].split(" ")[0]
     to_addrs = pessoa["email"] # destinatário
 
-    body = msg1+str(nome)+",\n\n";
+    body = msg1+str(nome)+"!\n\n";
     body = body + msg2;
 
     # parâmetros da mensagem a ser enviada
@@ -69,7 +69,7 @@ for pessoa in participantes:
     print ("mensagem enviada com sucesso para:   "+nome+"   no e-mail:   "+to_addrs)
     contador = contador + 1
 
-    if (contador > 8):
+    if (contador > 7):
         server.quit()
         print("RECONECTANDO COM O SERVIDOR...")
         time.sleep(90)
